@@ -1,0 +1,305 @@
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Hero Section Styling */
+.hero {
+  height: 100vh;
+  background-color: #ffffff; /* clean white */
+  color: #212529;
+}
+/* Purple text */
+.text-purple {
+  color: #4B0082;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px; /* or match your navbar height */
+}
+
+/* Custom button with deep purple */
+.btn-primary {
+  background-color: #4B0082;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #34105e;
+  transition: 0.3s ease-in-out;
+}
+/* Smooth hover effect for navbar links */
+.navbar .nav-link {
+  position: relative;
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+.nav-hover {
+  position: relative;
+  color: #ffffff;
+  transition: color 0.3s ease;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+ /* .nav-hover:hover {
+  color: #ffccff; 
+  text-shadow: 0 0 5px #ffccff;
+} */
+.nav-hover::after { 
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 3px;
+  background-color: #ffffff;
+  transition: width 0.3s ease;
+}
+
+.nav-hover:hover::after {
+  width: 100%;
+}
+.navbar .nav-link:hover {
+  color: 	#FFD700; /*Light pink-purple shade on hover*/
+  /* color:white; */
+}
+
+/* Optional underline animation */
+.navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  left: 0;
+  bottom: 0;
+  background-color: #ffffff;
+  transition: width 0.3s ease;
+}
+
+.navbar .nav-link:hover::after {
+  width: 100%;
+}
+.navbar .nav-link i {
+  margin-right: 8px;
+}
+/* Home Section */
+.hero-section {
+  min-height: 100vh;
+  padding: 60px 20px;
+  /* margin-top: 500px; */
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+    align-items: center;
+  /* background-color: #FFD700; */
+}
+.profile-img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border: 5px solid #4B0082;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+/* Deep Purple Text */
+.text-purple {
+  color: #4B0082;
+}
+
+/* CTA Button Styling */
+.btn-primary {
+  background-color: #4B0082;
+  border: none;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #34105e;
+  color: #fff;
+  transition: 0.3s ease-in-out;
+}
+/* Social Icons */
+  .social-icons a {
+  font-size: 45px;
+  margin: 0 12px;
+  color: #4B0082;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.social-icons a[href*="github"]:hover {
+  color: black;
+  animation: pulse 0.8s infinite; /* GitHub gray */
+}
+
+.social-icons a[href*="linkedin"]:hover {
+  color: #0A66C2; 
+  animation: pulse 0.8s infinite;/* LinkedIn blue */
+}
+
+.social-icons a[href*="instagram"]:hover {
+  color: #E1306C;
+  animation: pulse 0.8s infinite; /* Instagram pink */
+}
+/* .social-icons a:hover { /* soft purple-pink *
+  transform: translateY(-3px) scale(1.5); 
+} */
+/* Keyframes: Bounce animation */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+}
+#tsparticles {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  background-color: #fff; /* or transparent if needed */
+}
+/* Scroll Down Arrow */
+.scroll-down {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.scroll-down a {
+  font-size: 32px;
+  color: #4B0082;
+  display: inline-block;
+  animation: bounceArrow 1.5s infinite;
+  transition: color 0.3s ease;
+}
+
+.scroll-down a:hover {
+  color: #6a0dad;
+}
+
+/* Smooth Bounce Animation */
+@keyframes bounceArrow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+/* About Section */
+.about-section {
+  background-color: #f9f7fc;
+  padding: 60px 20px;
+}
+/* 🔲 Animate Fieldset */
+.about-fieldset {
+  border: 2px solid #4B0082;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #333;
+  font-family: 'Poppins', sans-serif;
+  max-width: 700px;
+  margin: auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* ✏️ Legend Style */
+.about-fieldset legend {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #4B0082;
+  padding: 0 10px;
+}
+.glow-border-container {
+  position: relative;
+  max-width: 720px;
+  margin: auto;
+}
+.glow-dot {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: #4B0082;
+  border-radius: 50%;
+  pointer-events: none;
+  /* box-shadow: 0 0 10px #FFD700 0 0 20px #FFD700; */
+  animation: moveAround 8s linear infinite,
+  pulseGlow 1.5s ease-in-out infinite;
+  z-index: 2;
+  box-shadow:
+    0 0 8px  #4B0082,
+    0 0 16px #4B0082,
+    0 0 24px #4B0082,
+    0 0 32px #4B0082,
+    0 0 40px #4B0082;
+}
+
+/* 🔁 Dot travels border in square path */
+@keyframes moveAround {
+  0% {
+    top: -6px;
+    left: -6px;
+  }
+  25% {
+    top: -6px;
+    left: calc(100%-6px);
+    transform: translate(-100%, 0);
+  }
+  50% {
+    top: calc(100%-6px);
+    left: calc(100%-6px);
+    transform: translate(-100%, -100%);
+  }
+  75% {
+    top: calc(100%-6px);
+    left: -6px;
+    transform: translate(0, -100%);
+  }
+  100% {
+    top: -6px;
+    left: -6px;
+  }
+}
+
+/* 🌟 Fade + Slide Animation */
+@keyframes fadeSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes glowBorder {
+  0% {
+    box-shadow: 0 0 10px rgba(75, 0, 130, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 25px rgba(75, 0, 130, 0.7);
+  }
+}
+
+@keyframes pulseGlow {
+  0% {
+    box-shadow:
+      0 0 8px #fff200,
+      0 0 16px #fff200,
+      0 0 24px #fff200;
+    transform: scale(1);
+  }
+  50% {
+    box-shadow:
+      0 0 12px #fff200,
+      0 0 24px #fff200,
+      0 0 40px #fff200;
+    transform: scale(1.2);
+  }
+  100% {
+    box-shadow:
+      0 0 8px #fff200,
+      0 0 16px #fff200,
+      0 0 24px #fff200;
+    transform: scale(1);
+  }
+}
